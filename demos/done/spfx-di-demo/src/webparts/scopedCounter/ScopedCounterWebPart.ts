@@ -8,12 +8,10 @@ import {
 } from '@microsoft/sp-property-pane';
 
 import * as strings from 'ScopedCounterWebPartStrings';
-import ScopedCounter from './components/ScopedCounter';
-import { IScopedCounterProps } from './components/IScopedCounterProps';
 import { ICounterService } from '../../services/ICounterService';
-import { CounterServiceKey } from '../../services/CounterService';
 import Counter from '../counter/components/Counter';
-import { DoubleCounterService, DoubleCounterServiceKey } from '../../services/DoubleCounterService';
+import { DoubleCounterServiceKey } from '../../services/DoubleCounterService';
+import { ICounterProps } from '../counter/components/ICounterProps';
 
 export interface IScopedCounterWebPartProps {
   description: string;
@@ -27,7 +25,7 @@ export default class ScopedCounterWebPart extends BaseClientSideWebPart<IScopedC
     const scopedCounterServiceInstance: ICounterService = serviceScope.createDefaultAndProvide(DoubleCounterServiceKey);
     serviceScope.finish();
 
-    const element: React.ReactElement<IScopedCounterProps > = React.createElement(
+    const element: React.ReactElement<ICounterProps > = React.createElement(
       Counter,
       {
         description: this.properties.description,
