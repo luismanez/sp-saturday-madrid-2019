@@ -22,6 +22,7 @@ export default class ScopedCounterWebPart extends BaseClientSideWebPart<IScopedC
   public render(): void {
 
     // TODO Demo 4: scope new child
+    let scopedCounterServiceInstance = null;
 
     const element: React.ReactElement<ICounterProps > = React.createElement(
       Counter,
