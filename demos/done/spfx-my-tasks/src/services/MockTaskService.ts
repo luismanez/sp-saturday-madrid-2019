@@ -1,7 +1,8 @@
 import { ITaskService } from "./ITaskService";
 import { ServiceScope } from "@microsoft/sp-core-library";
-import { LoggerKey, ILogger } from "./ILogger";
+import { ILogger } from "./ILogger";
 import { ITask } from "../models/ITask";
+import { LoggerKey } from "./ServiceKeys";
 
 export default class MockTaskService implements ITaskService {
   private _logger: ILogger;

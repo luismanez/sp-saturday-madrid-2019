@@ -2,7 +2,8 @@ import { ITaskService } from "./ITaskService";
 import { ITask } from "../models/ITask";
 import { ServiceScope } from "@microsoft/sp-core-library";
 import { MSGraphClientFactory, MSGraphClient } from "@microsoft/sp-http";
-import { ILogger, LoggerKey } from "./ILogger";
+import { ILogger } from "./ILogger";
+import { LoggerKey } from "./ServiceKeys";
 
 export default class GraphTaskService implements ITaskService {
 

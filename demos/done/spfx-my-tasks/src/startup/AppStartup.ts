@@ -1,9 +1,8 @@
 import { ServiceScope, Environment, EnvironmentType } from "@microsoft/sp-core-library";
 import { WebPartContext } from "@microsoft/sp-webpart-base";
-import { TaskServiceKey } from "../services/ITaskService";
 import MockTaskService from "../services/MockTaskService";
-import { LoggerKey } from "../services/ILogger";
 import ConsoleLogger from "../services/ConsoleLogger";
+import { LoggerKey, TaskServiceKey } from "../services/ServiceKeys";
 
 export class AppStartup {
 
@@ -48,7 +47,7 @@ export class AppStartup {
       childScope.finish();
 
       childScope.whenFinished(() => {
-        // If other services must be used, it must done HERE. i.e:
+        // If other services are required, it must be done HERE. i.e:
         //AppStartup.serviceScope = childScope;
 
         resolve(childScope);

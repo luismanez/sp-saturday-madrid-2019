@@ -1,7 +1,6 @@
 import * as React from 'react';
 import styles from './MyTasks.module.scss';
 import { IMyTasksProps, IMyTasksState } from './IMyTasksProps';
-import { escape } from '@microsoft/sp-lodash-subset';
 import { ITaskService } from '../../../services/ITaskService';
 
 export default class MyTasks extends React.Component<IMyTasksProps, IMyTasksState> {

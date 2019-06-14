@@ -11,8 +11,9 @@ import * as strings from 'MyTasksWebPartStrings';
 import MyTasks from './components/MyTasks';
 import { IMyTasksProps } from './components/IMyTasksProps';
 import { AppStartup } from '../../startup/AppStartup';
-import { ILogger, LoggerKey } from '../../services/ILogger';
-import { ITaskService, TaskServiceKey } from '../../services/ITaskService';
+import { ILogger } from '../../services/ILogger';
+import { ITaskService } from '../../services/ITaskService';
+import { LoggerKey, TaskServiceKey } from '../../services/ServiceKeys';
 
 export interface IMyTasksWebPartProps {
   description: string;
