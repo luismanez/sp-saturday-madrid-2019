@@ -21,7 +21,8 @@ export class AppStartup {
     return new Promise<any>((resolve, reject) => {
       ctx.serviceScope.whenFinished(() => {
 
-        // Proper place to configure things (i.e: PnP JS lib), or using webpart props for other setup...
+        // Proper place to configure things (i.e: PnP JS lib),
+        // or using webpart props for other setup...
         // pnp.setup({
         //   spfxContext: ctx
         // });
@@ -39,7 +40,7 @@ export class AppStartup {
       // Here create a dedicated service scope for test or local context
       const childScope: ServiceScope = ctx.serviceScope.startNewChild();
 
-      // Register the services that will override default implementation (order matters!)
+      // Register the services that will override default implementation
       childScope.createAndProvide(LoggerKey, ConsoleLogger);
       childScope.createAndProvide(TaskServiceKey, MockTaskService);
 
